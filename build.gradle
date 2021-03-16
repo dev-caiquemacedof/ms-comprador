@@ -1,5 +1,5 @@
 plugins {
-    id 'org.springframework.boot' version '2.1.6.RELEASE'
+    id 'org.springframework.boot' version '1.5.22.RELEASE'
     id 'io.spring.dependency-management' version '1.0.11.RELEASE'
     id 'java'
 }
@@ -16,7 +16,9 @@ configurations {
 }
 
 repositories {
+    mavenLocal()
     mavenCentral()
+    maven { url 'http://oss.jfrog.org/artifactory/oss-snapshot-local/' }
 }
 
 dependencies {
@@ -24,8 +26,10 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-data-rest'
     implementation 'org.springframework.boot:spring-boot-starter-hateoas'
     implementation 'org.springframework.boot:spring-boot-starter-web'
-    implementation 'io.springfox:springfox-swagger2:2.9.2'
-    implementation 'io.springfox:springfox-swagger-ui:2.9.2'
+    implementation"jakarta.xml.bind:jakarta.xml.bind-api:2.3.2"
+    implementation'io.springfox:springfox-data-rest:2.7.1-SNAPSHOT'
+    implementation'io.springfox:springfox-swagger2:2.7.1-SNAPSHOT'
+    implementation'io.springfox:springfox-swagger-ui:2.7.1-SNAPSHOT'
     compileOnly 'org.projectlombok:lombok'
     runtimeOnly 'com.h2database:h2'
     annotationProcessor 'org.projectlombok:lombok'

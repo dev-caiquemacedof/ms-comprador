@@ -1,6 +1,7 @@
 package br.com.fiap.arremate.mscomprador.repositories;
 
 import br.com.fiap.arremate.mscomprador.entities.Comprador;
+import io.swagger.annotations.Api;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
