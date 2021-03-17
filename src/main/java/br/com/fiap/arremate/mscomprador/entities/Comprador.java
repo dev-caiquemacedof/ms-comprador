@@ -1,9 +1,6 @@
 package br.com.fiap.arremate.mscomprador.entities;
 
 import io.swagger.annotations.ApiModel;
-import io.swagger.annotations.ApiModelProperty;
-import lombok.Data;
-
 import javax.persistence.*;
 
 @ApiModel(value = "Comprador", description = "The model for comprador")
