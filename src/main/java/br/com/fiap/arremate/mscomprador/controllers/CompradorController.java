@@ -1,6 +1,7 @@
 package br.com.fiap.arremate.mscomprador.controllers;
 
 import br.com.fiap.arremate.mscomprador.dtos.request.CompradorDTO;
+import br.com.fiap.arremate.mscomprador.exceptions.CompradorNotFoundException;
 import br.com.fiap.arremate.mscomprador.service.CompradorService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -22,6 +23,7 @@ public class CompradorController {
 
     @GetMapping("/{id}")
     @ResponseStatus(HttpStatus.OK)
+    @ExceptionHandler({ CompradorNotFoundException.class })
     public CompradorDTO listarPorId(@PathVariable Long id){
         return compradorService.listarPorId(id);
     }

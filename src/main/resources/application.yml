@@ -3,9 +3,10 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:AZ;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    url: jdbc:mysql://localhost:3306/arramate_mscomprador?useTimezone=true&serverTimezone=UTC
     username: root
     password:
+    driver-class-name: com.mysql.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: update
